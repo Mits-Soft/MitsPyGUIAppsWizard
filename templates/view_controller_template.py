@@ -353,12 +353,12 @@ class MitsPanel(MitsWidget):
             new_height_after = panel_after.height() - delta.y()
 
             if new_height_before > 0 and new_height_after > 0:
-                panel_before.setFixedHeight(new_height_before)
-                panel_after.setFixedHeight(new_height_after)
+                panel_before.setMinimumHeight(new_height_before)
+                panel_after.setMinimumHeight(new_height_after)
         else:
             new_width_before = panel_before.width() + delta.x()
             new_width_after = panel_after.width() - delta.x()
 
             if new_width_before > 0 and new_width_after > 0:
-                panel_before.setFixedWidth(new_width_before)
-                panel_after.setFixedWidth(new_width_after)
+                panel_before.setMinimumWidth(new_width_before)
+                panel_after.setMinimumWidth(new_width_after)
